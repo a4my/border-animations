@@ -12,12 +12,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
   background-color: #0e1538;
 }
 
 .box {
-  margin-top: 150px;
+  margin-top: 100px;
   position: relative;
   width: 300px;
   height: 300px;
@@ -111,4 +110,60 @@ body {
 .loader {
   color: #fff;
   font-weight: 500s;
+}
+
+/* Animation-2*/
+
+.animation-3 {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: changeBg 5s linear infinite;
+}
+
+.animation-3 .loader {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to top, #0e1538 40%, #51eeee);
+  border-radius: 50%;
+  animation: rotate-3 2s linear infinite;
+}
+
+@keyframes rotate-3 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animation-3 .loader::before {
+  content: '';
+  position: absolute;
+  background: #0e1538;
+  inset: 20px 20px 0 0;
+  border-radius: 50%;
+}
+
+.animation-3 .loader::after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  right: -8px;
+  width: 40px;
+  height: 40px;
+  background: #51eeee;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #51eeee, 0 0 25px #51eeee, 0 0 50px #51eeee,
+    0 0 75px #51eeee;
+}
+
+/* Animation-4*/
+
+.animation-4 {
+  margin-top: 150px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
